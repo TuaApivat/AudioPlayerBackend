@@ -99,14 +99,10 @@ app.get('/api/getMusic',async function (req, res) {
   }
 });
 
-app.get('/api/test',async function (req, res) {
-   res.send(200);
-});
 
 app.post('/api/Music/upload',upload.fields([{ name: 'musicFile', maxCount: 1 }, { name: 'musicCover', maxCount: 1 }]), async function (req, res, next) {
   // req.files is array of `music` files
   // req.body will contain the text fields, if there were any
-  console.log('test');
   console.log(req.files['musicFile'][0].path)
   console.log(req.files['musicCover'][0].path)
 
