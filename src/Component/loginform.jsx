@@ -11,14 +11,23 @@ import {
   Button,
 } from 'reactstrap';
 import "bootstrap/dist/css/bootstrap.min.css"; 
+import axios from 'axios';
 
 const LoginForm = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) =>  {
     e.preventDefault();
-    // Handle login logic here
+    /*
+    var res = await axios.get('/api',data)
+        if(res.data.result == 'success'){
+            alert(res.data.result)
+    }
+    */
+  
+    var res = await axios.get('/api/test');
+    alert('FUCKYOU');
   };
 
   return (
@@ -57,7 +66,9 @@ const LoginForm = () => {
                   <div className="text-center mb-3">
                     <p className="mb-0">or</p>
                   </div>
-                  <Button color="light" block className="mb-3">
+                  <Button color="light" block className="mb-3" 
+                    onClick={handleSubmit}
+                  >
                     <img src="google-logo.png" alt="Google Logo" className="mr-2" />
                     Continue with Google
                   </Button>

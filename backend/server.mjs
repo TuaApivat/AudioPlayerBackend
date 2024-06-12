@@ -82,6 +82,7 @@ app.post('/api/fetchInList',async function (req, res) {
   
 });
 
+
 app.get('/api/getMusic',async function (req, res) {
   var statement = 'select * from music mu';
   var musictype = ''
@@ -96,6 +97,10 @@ app.get('/api/getMusic',async function (req, res) {
   if(ret != null){
      res.status(200).json({'result':'success','queryret':ret.rows})
   }
+});
+
+app.get('/api/test',async function (req, res) {
+   res.send(200);
 });
 
 app.post('/api/Music/upload',upload.fields([{ name: 'musicFile', maxCount: 1 }, { name: 'musicCover', maxCount: 1 }]), async function (req, res, next) {
