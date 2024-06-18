@@ -1,13 +1,13 @@
 import './App.css'
-import MusicForm from './Component/dataform'
-import LoginForm from './Component/loginform'
-import MusicListCom from './Component/musiclist'
+//import LoginForm from './Component/loginform'
+import MusicMng from './Component/MusicManager'
+
 
 function App() {
 
   return (
     <>
-      <MusicForm/>
+      <MusicMng/>
     </>
   )
 }

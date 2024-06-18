@@ -8,7 +8,7 @@ export default defineConfig({
     proxy: {
       
       '/api': {
-        target: 'https://kidsghymnplayer.com',
+        target: 'http://localhost:3000',
         changeOrigin: true,
         secure: false
       }

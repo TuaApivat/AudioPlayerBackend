@@ -19,15 +19,9 @@ const LoginForm = () => {
 
   const handleSubmit = async (e) =>  {
     e.preventDefault();
-    /*
-    var res = await axios.get('/api',data)
-        if(res.data.result == 'success'){
-            alert(res.data.result)
-    }
-    */
   
-    var res = await axios.get('/api/test');
-    alert('FUCKYOU');
+    var res = await axios.get('api/getAllMusicFile');
+    alert(res.data.ret);
   };
 
   return (
